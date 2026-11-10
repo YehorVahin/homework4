@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h1>Селектори CSS та специфічність</h1>
+      <h2>1. Селектор тега</h2>
+      <p>
+        Селектор <code>p</code> стилізує всі елементи цього тега на сторінках,
+        де підключений спільний файл style.css
+      </p>
+      <h2>2. Селектор класу</h2>
+      <p class="highlight">
+        Селектор<code>.highlight</code> стилізує всі елементи з даним класом на
+        сторінках, де підключений спільний файл style.css
+      </p>
+      <h2>3. Селектор атрибута</h2>
+      <p data-level="important">
+        Селектор <code>[data-level="important"]</code> вибирає елементи за
+        значенням атрибута.
+      </p>
+      <h2>4. Дочірній селектор і селектор нащадка</h2>
+      <ul class="menu">
+        <li>
+          Дочірній елемент: <code>.menu &gt; li</code> додає синю лінію зліва.
+          <ul>
+            <li>
+              Вкладений елемент: <code>.menu &gt; li</code> його не вибирає, а
+              <code>.menu li li</code> робить курсивним.
+            </li>
+          </ul>
+        </li>
+        <li>Другий дочірній елемент: лінія зліва теж є.</li>
+      </ul>
+      <h2>5. Псевдокласи :first-child, :nth-child, :last-child</h2>
+      <ol class="steps">
+        <li>Перший елемент: <code>li:first-child</code></li>
+        <li>Другий елемент: <code>li:nth-child(even)</code></li>
+        <li>Третій елемент: без спеціальних правил</li>
+        <li>
+          Четвертий елемент: <code>li:nth-child(even)</code> і
+          <code>li:last-child</code>
+        </li>
+      </ol>
+      <h2>6. Псевдокласи :hover, :active, :focus</h2>
+      <p>
+        Навести курсор, натиснути або перейти клавішею Tab на посилання чи
+        кнопку: <code>:hover</code>, <code>:active</code>, <code>:focus</code>.
+      </p>
+      <a class="demo" href="#">Посилання</a>
+      <button type="button">Кнопка</button>
+      <h2>7. Конфлікт 1: ID проти класу й тегів</h2>
+      <p id="priority" class="conflict">
+        Правило <code>#priority</code> має специфічність (1, 0, 0), а правило
+        <code>p.conflict</code> — (0, 1, 0). Застосовується
+        <code>#priority</code> (зелений фон): порівняння йде зліва направо, тому
+        один ID перемагає будь-яку кількість класів і тегів, навіть якщо це
+        правило записано в CSS раніше.
+      </p>
+      <h2>8. Конфлікт 2: однакова специфічність</h2>
+      <p class="muted accent">
+        Правила <code>.accent</code> і <code>.muted</code> мають однакову
+        специфічність (0, 1, 0). Застосовується <code>.muted</code> (сірий фон):
+        за рівної специфічності перемагає правило, записане в style.css пізніше.
+        Порядок назв у атрибуті class на результат не впливає.
+      </p>
+    </main>
+  </body>
+</html>
