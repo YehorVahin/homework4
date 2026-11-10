@@ -1,0 +1,32 @@
+# Секрети та змінні оточення
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Системні файли macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Системні файли Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Системні файли Linux
+*~
+.directory
+.Trash-*
+
+# Редактори та IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Логи
+*.log
