@@ -7,7 +7,7 @@
     <title>Homework GitHub Second Branch</title>
   </head>
   <body>
-    <main>
+    <main class="container">
       <h1>Селектори CSS та специфічність</h1>
       <h2>1. Селектор тега</h2>
       <p>
@@ -69,6 +69,47 @@
         за рівної специфічності перемагає правило, записане в style.css пізніше.
         Порядок назв у атрибуті class на результат не впливає.
       </p>
+      <div class="table-wrap">
+        <table>
+          <caption>
+            Порівняння трьох базових технологій веброзробки
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Ознака</th>
+              <th scope="col">HTML</th>
+              <th scope="col">CSS</th>
+              <th scope="col">JavaScript</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Основна роль</th>
+              <td>Структура та зміст сторінки</td>
+              <td>Зовнішній вигляд і розташування елементів</td>
+              <td>Поведінка та інтерактивність</td>
+            </tr>
+            <tr>
+              <th scope="row">Приклад запису</th>
+              <td><code>&lt;h1&gt;Заголовок&lt;/h1&gt;</code></td>
+              <td><code>h1 { color: navy; }</code></td>
+              <td><code>alert("Привіт");</code></td>
+            </tr>
+            <tr>
+              <th scope="row">Розширення файлу</th>
+              <td><code>.html</code></td>
+              <td><code>.css</code></td>
+              <td><code>.js</code></td>
+            </tr>
+            <tr>
+              <th scope="row">Що бачить користувач</th>
+              <td>Заголовки, абзаци, таблиці, посилання</td>
+              <td>Кольори, шрифти, відступи, межі</td>
+              <td>Реакцію на кліки та зміну вмісту</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </main>
   </body>
 </html>
